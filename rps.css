@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+    background-color: #3b82f6; /* Soft blue */
+    padding: 15px 20px;
+    color: white;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap; /* Force a row layout */
+    margin-bottom: 2em;
+    overflow-x: auto; /* Add horizontal scrolling if needed on very small screens */
+    padding: 10px;
+}
+
+.choice {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex: 0 0 auto; /* Prevent items from wrapping */
+}
+
+.choice:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.choice img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transition: border 0.3s ease;
+}
+
+.choice img:hover {
+    border: 2px solid #3b82f6; /* Highlighted border on hover */
+}
+
+.score_board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 2em;
+}
+
+.score {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #3b82f6;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+}
+
+.message_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    padding: 0 15px;
+}
+
+#message {
+    background-color: #6b6b6b; /* Green */
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .choice img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .score {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    #message {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .choices {
+        gap: 10px;
+        justify-content: space-between; /* Ensure spacing between images */
+        padding: 5px;
+    }
+
+    .choice img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .score {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    #message {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
